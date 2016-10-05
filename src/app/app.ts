@@ -3,7 +3,6 @@ import { Home } from './home';
 
 @Component({
   selector: 'app',
-  directives: [Home],
   template: `
     <home></home>
   `,

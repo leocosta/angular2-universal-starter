@@ -21,18 +21,18 @@ function printStats(stats) {
 }
 
 // BROWSER CODE MINIFICATION 
-const UGLIFY_PLUGIN = new webpack.optimize.UglifyJsPlugin({
-  compress: {
-    warnings: false,
-    drop_console: true,
-    unsafe: true
-  }
-});
+// const UGLIFY_PLUGIN = new webpack.optimize.UglifyJsPlugin({
+//   compress: {
+//     warnings: false,
+//     drop_console: true,
+//     unsafe: true
+//   }
+// });
 
-VENDOR_CONFIG.plugins.push(UGLIFY_PLUGIN);
-BROWSER_CONFIG.plugins.push(UGLIFY_PLUGIN);
-WORKER_CONFIG.plugins.push(UGLIFY_PLUGIN);
-WORKER_APP_CONFIG.plugins.push(UGLIFY_PLUGIN);
+// VENDOR_CONFIG.plugins.push(UGLIFY_PLUGIN);
+// BROWSER_CONFIG.plugins.push(UGLIFY_PLUGIN);
+// WORKER_CONFIG.plugins.push(UGLIFY_PLUGIN);
+// WORKER_APP_CONFIG.plugins.push(UGLIFY_PLUGIN);
 
 webpack(VENDOR_CONFIG, function(vendorError, vendorStats) {
   if (vendorError) {

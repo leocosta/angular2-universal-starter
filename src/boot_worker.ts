@@ -1,6 +1,8 @@
 import './polyfills';
 
-import { bootstrapWorkerUi } from '@angular/platform-browser-dynamic';
+// import { bootstrapWorkerUi } from '@angular/platform-browser-dynamic';
+
+import { bootstrapWorkerUi } from '@angular/platform-webworker';
 
 const workerScriptUrl = URL.createObjectURL(new Blob([`
   var importScripts_ = this.importScripts;
@@ -25,3 +27,5 @@ const workerScriptUrl = URL.createObjectURL(new Blob([`
 }));
 
 bootstrapWorkerUi(workerScriptUrl, []);
+
+//bootstrapWorkerUi(workerScriptUrl, []);

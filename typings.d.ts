@@ -1,4 +1,4 @@
-/// <reference path="typings/main.d.ts" />
+
 
 declare const ROOT_DIR: string;
 declare const SRC_DIR: string;
